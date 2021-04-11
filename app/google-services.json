@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "604294045184",
+    "firebase_url": "https://angel-shot-c7803-default-rtdb.firebaseio.com",
+    "project_id": "angel-shot-c7803",
+    "storage_bucket": "angel-shot-c7803.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:604294045184:android:bb9da248a6833c0a3842e5",
+        "android_client_info": {
+          "package_name": "com.superposition.ingredienttalk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "604294045184-qtir1ks0h5i2c90ei7pb56bak3dlvq09.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.superposition.ingredienttalk",
+            "certificate_hash": "bd168c1b6ba58ff2b5042f34f67d12c5add2f3d5"
+          }
+        },
+        {
+          "client_id": "604294045184-0f0oh2psbdm08uu77abb8e7sslivtci8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpv5axQ6rntlPwpR0JpP5_2xe29ZTt_Sc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "604294045184-0f0oh2psbdm08uu77abb8e7sslivtci8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

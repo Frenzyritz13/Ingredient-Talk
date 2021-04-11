@@ -1,5 +1,7 @@
 package com.superposition.ingredienttalk.fragment;
 
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -14,6 +16,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 import com.superposition.ingredienttalk.R;
+import com.superposition.ingredienttalk.activity.LoginActivity;
 import com.superposition.ingredienttalk.util.Constants;
 
 public class ProfileFragment extends Fragment {
@@ -35,6 +38,7 @@ public class ProfileFragment extends Fragment {
         txtMobile = view.findViewById(R.id.txtProfileMobile);
         btnLogout = view.findViewById(R.id.btnLogout);
         imgProfile = view.findViewById(R.id.imgProfile);
+        sharedPreferences = getActivity().getSharedPreferences(Constants.MY_PREF, Context.MODE_PRIVATE);
 
         Picasso.get().load(sharedPreferences.getString(Constants.IMAGE_LINK,"no_image"))
                 .error(R.drawable.ic_user_150)
@@ -43,6 +47,16 @@ public class ProfileFragment extends Fragment {
         txtName.setText(sharedPreferences.getString(Constants.NAME,"--"));
         txtEmail.setText(sharedPreferences.getString(Constants.EMAIL,"--"));
         txtMobile.setText(sharedPreferences.getString(Constants.MOBILE,"--"));
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sharedPreferences.edit().clear().apply();
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        });
 
         return view;
     }

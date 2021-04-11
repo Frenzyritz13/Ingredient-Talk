@@ -14,6 +14,7 @@ import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -270,6 +271,13 @@ public class SignUpActivity extends AppCompatActivity {
                     Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                     startActivity(intent);
                     finish();
+
+                    SmsManager smsManager = SmsManager.getDefault();
+                    smsManager.sendTextMessage("+91"+mobile,null,"Hey, "+name+" thank you for choosing us. Please go through the following" +
+                            " secret ingredients : "+"1) Red Chilly Powder - Emergency"+"2) Pepper - Sexual Harassment"+
+                            "3) Green Chilly - Domestic Violence"+"4) Garlic Paste - Work Place Violence"+"5) Salt - Harassment in Public Transport"+"\n"+
+                            "6) Turmeric Powder - Bullying and Harassment in Schools and Colleges"+"7) Oil - Eve Teasing",null,null);
+
                 }else{
                     progressDialog.dismiss();
                     btnOtp.setVisibility(View.GONE);

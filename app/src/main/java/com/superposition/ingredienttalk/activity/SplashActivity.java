@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,7 +25,7 @@ import java.util.List;
 
 public class SplashActivity extends AppCompatActivity {
 
-    String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE};
+    String[] permissions = {Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.SEND_SMS, Manifest.permission.READ_EXTERNAL_STORAGE};
     final int REQUEST_PERMISSION = 101;
 
     TextView txtProgress;
@@ -43,6 +44,7 @@ public class SplashActivity extends AppCompatActivity {
 
         txtProgress.setVisibility(View.GONE);
         spinKitView.setVisibility(View.GONE);
+
 
         checkPermissions();
     }

@@ -1,14 +1,355 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/purpleLight"
     tools:context=".fragment.ReceipeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/txtResCancel"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/avenir55_roman"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Receipe"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold" />
 
-</FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgDish"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="2"
+                        android:src="@drawable/butter_paneer"
+                        app:civ_border_color="#707070"
+                        app:civ_border_width="1dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="4"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtDishName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/avenir55_roman"
+                            android:text="Paneer Tikka Masala"
+                            android:textColor="@color/purpleLight"
+                            android:textSize="18sp" />
+
+
+                        <TextView
+                            android:id="@+id/txtDishDes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/avenir55_roman"
+                            android:text="Paneer tikka is an Indian dish made from chunks of paneer marinated in spices and grilled in a tandoor."
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/txtDishRating"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_baseline_star_24"
+                            android:drawableTint="@color/purpleLight"
+                            android:fontFamily="@font/avenir55_roman"
+                            android:gravity="center_vertical"
+                            android:text="4.5"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="Ingredients"
+                        android:textColor="@color/purpleLight"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Paneer (cottage cheese) cut into triangles 500 grams" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Butter 5 tablespoons" />
+
+                    <TextView
+                        android:id="@+id/txtOil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Oil 1 teaspoon" />
+
+                    <TextView
+                        android:id="@+id/txtGreenChilly"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Green chilli" />
+
+                    <TextView
+                        android:id="@+id/txtPepper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Pepper" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Cinnamon 2 one-inch" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Dried red chillies broken 2" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Coriander seeds crushed 2 tablespoons" />
+
+                    <TextView
+                        android:id="@+id/txtHaldi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Turmeric powder 1 teaspoon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Onion sliced 1 medium" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Ginger paste 2 teaspoons" />
+
+                    <TextView
+                        android:id="@+id/txtGarlic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Garlic paste 2 teaspoons" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Coriander powder 1 teaspoon" />
+
+                    <TextView
+                        android:id="@+id/txtRedChilly"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Red chilli powder 1 teaspoon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Tomatoes chopped 5-6 medium" />
+
+                    <TextView
+                        android:id="@+id/txtSalt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Salt to taste" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Kasoori methi crushed ½ teaspoon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Fresh cream 2 tablespoons" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Coriander sprig for garnish" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="Instructions"
+                        android:textColor="@color/purpleLight"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/avenir55_roman"
+                        android:text="Step 1 Heat three tablespoons butter with one teaspoon oil in a kadai. Add bay leaves, cloves, cinnamon, red chillies and half of the crushed coriander seeds. Sauté for half a minute.\n\nStep 2 Add onion and stir-fry for thirty seconds and add ginger paste and garlic paste. Cook for another thirty seconds. Add coriander powder, red chilli powder and tomatoes. Cook on high heat till oil leaves the masala. Puree the mixture.\n\nStep 3 Heat the remaining butter in a non-stick, cook the pureed mixture for two minutes. Add paneer pieces and salt. Add ½ cup of water. Cook covered on low heat for five minutes.\n\nStep 4 Sprinkle kasoori methi and mix in lightly. Remove from heat and mix in cream. Serve hot, garnished with coriander sprig." />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

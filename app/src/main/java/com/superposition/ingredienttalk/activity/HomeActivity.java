@@ -40,11 +40,11 @@ public class HomeActivity extends AppCompatActivity {
 
     private void openProfile(){
         getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.fadein, R.anim.fadeout)
-                .replace(R.id.frameLayoutAdmin, new ProfileFragment()).commit();
+                .replace(R.id.frameLayout, new ProfileFragment()).commit();
     }
 
     private void openReceipe(){
         getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.fadein, R.anim.fadeout)
-                .replace(R.id.frameLayoutAdmin, new ReceipeFragment()).commit();
+                .replace(R.id.frameLayout, new ReceipeFragment()).commit();
     }
 }
